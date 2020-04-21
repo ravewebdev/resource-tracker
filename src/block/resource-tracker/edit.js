@@ -1,8 +1,11 @@
 /**
  * EDIT: Resource Counter Block
  */
-import { RichText } from '@wordpress/block-editor';
+import { PanelBody, PanelRow } from '@wordpress/components';
+import { InspectorControls } from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
+
+import ResourceInput from './components/ResourceInput';
 
 /**
  * Handle edit functionality in the admin.
@@ -23,8 +26,26 @@ const Edit = ( props ) => {
 	} = props;
 
 	return (
-		<div className={ className }>
-		</div>
+		<>
+			<InspectorControls>
+				<PanelBody
+					title={ __( 'Resource Tracker Options', 'resource-tracker' ) }
+					initialOpen={ true }
+				>
+					<PanelRow className="resource-settings">
+						{ resources.map( ( resource, index ) => (
+							<ResourceInput
+								resource={ resource }
+								key={ index }
+								index={ index }
+							/>
+						) ) }
+					</PanelRow>
+				</PanelBody>
+			</InspectorControls>
+			<div className={ className }>
+			</div>
+		</>
 	);
 };
 
