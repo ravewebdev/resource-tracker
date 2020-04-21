@@ -1,7 +1,7 @@
 /**
  * EDIT: Resource Counter Block
  */
-import { PanelBody, PanelRow } from '@wordpress/components';
+import { PanelBody, PanelRow, Button } from '@wordpress/components';
 import { InspectorControls } from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
 
@@ -69,6 +69,17 @@ const Edit = ( props ) => {
 								onUpdateResource={ onUpdateResource }
 							/>
 						) ) }
+						<Button
+							isPrimary
+							onClick={ () => {
+								onUpdateResource( {
+									name: '',
+									total: 0,
+								}, -1 );
+							} }
+						>
+							{ __( 'Add Resource', 'resource-tracker' ) }
+						</Button>
 					</PanelRow>
 				</PanelBody>
 			</InspectorControls>
