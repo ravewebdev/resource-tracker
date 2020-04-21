@@ -1,1 +1,1 @@
-import './usage-tracker';
+import './resource-tracker';

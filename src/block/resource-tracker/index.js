@@ -1,5 +1,5 @@
 /**
- * REGISTER: Usage Tracker Block.
+ * REGISTER: Resource Tracker Block.
  */
 import { __ } from '@wordpress/i18n';
 import { registerBlockType } from '@wordpress/blocks';
@@ -7,18 +7,16 @@ import { registerBlockType } from '@wordpress/blocks';
 import edit from './edit';
 import save from './save';
 
-registerBlockType( 'rave/usage-tracker', {
-	title: __( 'Usage Tracker', 'usage-tracker' ),
-	icon: 'edit',
+registerBlockType( 'rave/resource-tracker', {
+	title: __( 'Resource Tracker', 'resource-tracker' ),
+	icon: 'yes-alt',
 	category: 'widgets',
 	keywords: [
-		__( 'ability spell usage tracker', 'usage-tracker' ),
+		__( 'ability spell resource tracker', 'resource-tracker' ),
 	],
 	attributes: {
-		content: {
+		resources: {
 			type: 'array',
-			source: 'children',
-			selector: 'p',
 		},
 	},
 	edit,

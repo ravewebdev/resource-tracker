@@ -1,6 +1,6 @@
 {
-	"name": "rave/usage-tracker",
-	"description": "A block for tracking usage of abilities or spells in TTRPGs.",
+	"name": "rave/resource-tracker",
+	"description": "A block for tracking usage of resources in TTRPGs.",
 	"type": "wordpress-plugin",
 	"authors": [
 		{

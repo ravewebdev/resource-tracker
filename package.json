@@ -1,7 +1,7 @@
 {
-	"name": "usage-tracker",
+	"name": "resource-tracker",
 	"version": "0.0.1",
-	"description": "A block for tracking usage of abilities or spells in TTRPGs.",
+	"description": "A block for tracking usage of resources in TTRPGs.",
 	"main": "src/index.js",
 	"scripts": {
 		"start": "wp-scripts start",
@@ -16,7 +16,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/ravewebdev/usage-tracker"
+		"url": "git+https://github.com/ravewebdev/resource-tracker"
 	},
 	"keywords": [
 		"Gutenberg"
@@ -24,9 +24,9 @@
 	"author": "R A Van Epps",
 	"license": "GPL-3.0",
 	"bugs": {
-		"url": "https://github.com/ravewebdev/usage-tracker/issues"
+		"url": "https://github.com/ravewebdev/resource-tracker/issues"
 	},
-	"homepage": "https://github.com/ravewebdev/usage-tracker#readme",
+	"homepage": "https://github.com/ravewebdev/resource-tracker#readme",
 	"dependencies": {},
 	"devDependencies": {
 		"@webdevstudios/css-coding-standards": "^1.0.0",

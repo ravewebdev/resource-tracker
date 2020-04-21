@@ -1,4 +1,4 @@
-=== Usage Tracker ===
+=== Resource Tracker ===
 Contributors: ravewebdev
 Author URI: https://ravewebdev.com/
 Tags: gutenberg, blocks, rpg, role-playing game, ability, spell
@@ -9,15 +9,15 @@ Stable tag: 1.0.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Usage Tracker block to for use in TTRPGs.
+Resource Tracker block to for use in TTRPGs.
 
 == Description ==
-This plugin provides the Usage Tracker block, which can be used to track usage of abilities or spells in Table-Top Role-Playing Games.
+This plugin provides the Resource Tracker block, which can be used to track usage of resources (e.g., abilities, spells) in Table-Top Role-Playing Games.
 
 == Installation ==
-1. Upload the `usage-tracker` folder to the `/wp-content/plugins` directory.
-2. Activate the Usage Tracker plugin through the 'Plugins' menu in WordPress.
-3. Add the 'Usage Tracker' block in a post or page.
+1. Upload the `resource-tracker` folder to the `/wp-content/plugins` directory.
+2. Activate the Resource Tracker plugin through the 'Plugins' menu in WordPress.
+3. Add the 'Resource Tracker' block in a post or page.
 4. ...
 5. Save and view your page or post.
 6. ...
@@ -26,10 +26,10 @@ This plugin provides the Usage Tracker block, which can be used to track usage o
 = How should I use this block? =
 
 = How can I report issues or suggest improvements? =
-Feel free to create an issue or PR in the [Github repo here](https://github.com/ravewebdev/usage-tracker).
+Feel free to create an issue or PR in the [Github repo here](https://github.com/ravewebdev/resource-tracker).
 
 == Screenshots ==
 
 == Changelog ==
 = 1.0.0 =
-Added: Create Usage Tracker block.
+Added: Create Resource Tracker block.

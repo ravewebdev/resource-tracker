@@ -1,5 +1,5 @@
 /**
- * SAVE: Usage Counter Block
+ * SAVE: Resource Counter Block
  */
 import { RichText } from '@wordpress/block-editor';
 
