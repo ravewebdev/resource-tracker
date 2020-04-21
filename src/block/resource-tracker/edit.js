@@ -61,14 +61,6 @@ const Edit = ( props ) => {
 					initialOpen={ true }
 				>
 					<PanelRow className="resource-settings">
-						{ resources.map( ( resource, index ) => (
-							<ResourceInput
-								resource={ resource }
-								key={ index }
-								index={ index }
-								onUpdateResource={ onUpdateResource }
-							/>
-						) ) }
 						<Button
 							isPrimary
 							onClick={ () => {
@@ -80,6 +72,14 @@ const Edit = ( props ) => {
 						>
 							{ __( 'Add Resource', 'resource-tracker' ) }
 						</Button>
+						{ resources.map( ( resource, index ) => (
+							<ResourceInput
+								resource={ resource }
+								key={ index }
+								index={ index }
+								onUpdateResource={ onUpdateResource }
+							/>
+						) ) }
 					</PanelRow>
 				</PanelBody>
 			</InspectorControls>
