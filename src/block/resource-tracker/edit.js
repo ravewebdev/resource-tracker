@@ -25,6 +25,34 @@ const Edit = ( props ) => {
 		setAttributes,
 	} = props;
 
+	/**
+	 * Update `resources` attribute on any change to individual resource.
+	 *
+	 * @author R A Van Epps <rave@ravanepps.com>
+	 * @since  1.0.0
+	 *
+	 * @param  {Object}   resource Resource object.
+	 * @param  {number}   index    Current index of resource.
+	 */
+	const onUpdateResource = ( resource, index ) => {
+		resource.used = resource.hasOwnProperty( 'used' ) ? resource.used : 0;
+		const newResources = [ ...resources ];
+
+		if ( -1 === index ) {
+
+			// Add new resource instead of updating if index is set to -1.
+			newResources.push( { ...resource } );
+		} else {
+
+			// Update existing resource otherwise.
+			newResources[ index ] = { ...resource };
+		}
+
+		setAttributes( {
+			resources: newResources,
+		} );
+	};
+
 	return (
 		<>
 			<InspectorControls>
@@ -38,6 +66,7 @@ const Edit = ( props ) => {
 								resource={ resource }
 								key={ index }
 								index={ index }
+								onUpdateResource={ onUpdateResource }
 							/>
 						) ) }
 					</PanelRow>
