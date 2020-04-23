@@ -23,7 +23,6 @@ const Edit = ( props ) => {
 			{ __( 'Add some trackable resources, such as abilities or spells.', 'resource-tracker' ) }
 			<InnerBlocks
 				allowedBlocks={ [
-					'core/paragraph',
 					'rave/resource',
 				] }
 				template={ [
