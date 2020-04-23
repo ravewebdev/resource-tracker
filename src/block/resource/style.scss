@@ -11,4 +11,12 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 	}
+
+	.resource-pool-checkbox {
+		margin-bottom: 0;
+
+		* {
+			margin-bottom: 0;
+		}
+	}
 }

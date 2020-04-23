@@ -84,9 +84,9 @@ const Edit = ( props ) => {
 				</PanelBody>
 			</InspectorControls>
 			<div className={ `${ className } resource` }>
-				<p className="resource-name">{ displayName }</p>
-				<p className="resource-description">{ description }</p>
+				<h3 className="resource-name">{ displayName }</h3>
 				<p className="resource-pool">{ pool }</p>
+				<p className="resource-description">{ description }</p>
 			</div>
 		</>
 	);

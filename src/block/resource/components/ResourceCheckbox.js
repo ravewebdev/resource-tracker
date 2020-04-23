@@ -33,6 +33,7 @@ const ResourceCheckbox = ( props ) => {
 	return (
 		<CheckboxControl
 			checked={ isChecked }
+			className="resource-pool-checkbox"
 			onChange={ () => {
 				setChecked( ! isChecked );
 				used = ! isChecked ? used + 1 : used - 1;

@@ -37,17 +37,6 @@ const ResourceSettings = ( props ) => {
 					} }
 				/>
 			</label>
-			<label htmlFor={ descriptionClass } className={ descriptionClass }>
-				<h3>{ __( 'Description', 'resource-tracker' ) }</h3>
-				<TextareaControl
-					id={ descriptionClass }
-					rows={ 3 }
-					value={ description }
-					onChange={ ( newDescription ) => {
-						onUpdateResource( 'description', newDescription );
-					} }
-				/>
-			</label>
 			<label htmlFor={ totalClass } className={ totalClass }>
 				<h3>{ __( 'Total Uses', 'resource-tracker' ) }</h3>
 				<TextControl
@@ -58,6 +47,17 @@ const ResourceSettings = ( props ) => {
 						newTotal = parseInt( newTotal, 10 );
 						newTotal = 0 > newTotal ? 0 : newTotal;
 						onUpdateResource( 'total', newTotal );
+					} }
+				/>
+			</label>
+			<label htmlFor={ descriptionClass } className={ descriptionClass }>
+				<h3>{ __( 'Description', 'resource-tracker' ) }</h3>
+				<TextareaControl
+					id={ descriptionClass }
+					rows={ 3 }
+					value={ description }
+					onChange={ ( newDescription ) => {
+						onUpdateResource( 'description', newDescription );
 					} }
 				/>
 			</label>
