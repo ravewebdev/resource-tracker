@@ -11,6 +11,7 @@ registerBlockType( 'rave/resource', {
 	title: __( 'Resource', 'resource-tracker' ),
 	icon: 'image-filter',
 	category: 'widgets',
+	parent: [ 'rave/resource-tracker' ],
 	keywords: [
 		__( 'ability spell resource', 'resource-tracker' ),
 	],
