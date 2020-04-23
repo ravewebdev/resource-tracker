@@ -42,6 +42,9 @@ const Edit = ( props ) => {
 		} );
 	};
 
+	// Handle blank resource names.
+	const displayName = 0 === name.length ? __( '(Untitled Resource)', 'resource-tracker' ) : name;
+
 	return (
 		<>
 			<InspectorControls>
@@ -50,10 +53,19 @@ const Edit = ( props ) => {
 					initialOpen={ true }
 				>
 					<PanelRow className="resource-settings">
+						<ResourceSettings
+							name={ name }
+							total={ total }
+							used={ used }
+							onUpdateResource={ onUpdateResource }
+						/>
 					</PanelRow>
 				</PanelBody>
 			</InspectorControls>
 			<div className={ className }>
+				<p className="resource">
+					<span className="resource-name">{ displayName }</span>
+				</p>
 			</div>
 		</>
 	);
