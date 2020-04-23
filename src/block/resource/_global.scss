@@ -1,0 +1,15 @@
+// Shared variables, mixins, etc.
+
+$color-black: #000;
+$color-grey: #6c7781;
+
+@mixin checkbox {
+	background: none;
+	border-color: $color-grey;
+}
+
+@mixin checkmark {
+	color: $color-black;
+	content: '\2717';
+	margin: -0.5rem 0 0 -0.125rem;
+}

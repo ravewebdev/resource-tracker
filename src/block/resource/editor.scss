@@ -1,5 +1,7 @@
 // WordPress editor styles
 
+@import 'global';
+
 .resource-settings {
 	align-items: stretch;
 	flex-direction: column;
@@ -10,5 +12,13 @@
 
 	h3 {
 		margin: 1rem 0 0.25rem;
+	}
+}
+
+.block-editor-block-list__block .wp-block-rave-resource-tracker input[type='checkbox']:checked {
+	@include checkbox;
+
+	&::before {
+		@include checkmark;
 	}
 }
