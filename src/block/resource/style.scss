@@ -1,0 +1,36 @@
+// Front-end styles
+
+.wp-block-rave-resource {
+
+	.resource-description,
+	.resource-pool {
+		margin: 0;
+	}
+
+	.resource-description {
+		white-space: pre-line;
+	}
+
+	.resource-pool {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.resource-pool-checkbox {
+		margin-bottom: 0;
+		margin-right: 1rem;
+
+		* {
+			margin-bottom: 0;
+		}
+
+		.components-base-control__help {
+			text-align: center;
+		}
+
+		.components-checkbox-control__input {
+			margin: 0;
+		}
+	}
+}

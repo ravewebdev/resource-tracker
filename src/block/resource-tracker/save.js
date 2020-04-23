@@ -1,22 +1,17 @@
 /**
  * SAVE: Resource Counter Block
  */
-import { RichText } from '@wordpress/block-editor';
+import { InnerBlocks } from '@wordpress/block-editor';
 
 const Save = ( props ) => {
 	const {
-		attributes: {
-			content,
-		},
 		className,
 	} = props;
 
 	return (
-		<RichText.Content
-			className={ className }
-			tagName="p"
-			value={ content }
-		/>
+		<div className={ className }>
+			<InnerBlocks.Content />
+		</div>
 	);
 };
 

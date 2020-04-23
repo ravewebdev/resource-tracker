@@ -70,8 +70,13 @@ function register_block() {
 		);
 	}
 
-	// Register block with WordPress.
+	// Register blocks with WordPress.
 	register_block_type( 'rave/resource-tracker', array(
+		'editor_script' => 'resource-tracker-editor-script',
+		'editor_style'  => 'resource-tracker-editor-style',
+		'style'         => 'resource-tracker-style',
+	) );
+	register_block_type( 'rave/resource', array(
 		'editor_script' => 'resource-tracker-editor-script',
 		'editor_style'  => 'resource-tracker-editor-style',
 		'style'         => 'resource-tracker-style',

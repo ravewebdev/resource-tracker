@@ -1,0 +1,14 @@
+// WordPress editor styles
+
+.resource-settings {
+	align-items: stretch;
+	flex-direction: column;
+
+	label {
+		max-width: unset;
+	}
+
+	h3 {
+		margin: 1rem 0 0.25rem;
+	}
+}

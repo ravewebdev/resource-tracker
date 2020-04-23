@@ -9,7 +9,7 @@ import save from './save';
 
 registerBlockType( 'rave/resource-tracker', {
 	title: __( 'Resource Tracker', 'resource-tracker' ),
-	icon: 'yes-alt',
+	icon: 'editor-table',
 	category: 'widgets',
 	keywords: [
 		__( 'ability spell resource tracker', 'resource-tracker' ),
