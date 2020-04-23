@@ -6,6 +6,7 @@ import { InspectorControls } from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
 
 import ResourceSettings from './components/ResourceSettings';
+import ResourceCheckbox from './components/ResourceCheckbox';
 
 /**
  * Handle edit functionality in the admin.
@@ -45,6 +46,24 @@ const Edit = ( props ) => {
 	// Handle blank resource names.
 	const displayName = 0 === name.length ? __( '(Untitled Resource)', 'resource-tracker' ) : name;
 
+	// Create list of checkboxes to track total/used resources.
+	const pool = [];
+
+	for ( let i = 1; i <= total; i++ ) {
+
+		// Mark unchecked checkboxes as disabled except first checkbox after last checked checkbox.
+		const disabled = i > ( used + 1 );
+
+		pool.push(
+			<ResourceCheckbox
+				checked={ i <= used }
+				disabled={ disabled }
+				onUpdateResource={ onUpdateResource }
+				used={ used }
+			/>
+		);
+	}
+
 	return (
 		<>
 			<InspectorControls>
@@ -65,6 +84,7 @@ const Edit = ( props ) => {
 			<div className={ className }>
 				<p className="resource">
 					<span className="resource-name">{ displayName }</span>
+					<span className="resource-pool">{ pool }</span>
 				</p>
 			</div>
 		</>
