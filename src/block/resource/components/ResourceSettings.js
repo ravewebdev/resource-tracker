@@ -26,8 +26,8 @@ const ResourceSettings = ( props ) => {
 	return (
 		<>
 			<label htmlFor={ nameClass } className={ nameClass }>
+				<h3>{ __( 'Resource Name', 'resource-tracker' ) }</h3>
 				<TextControl
-					label={ __( 'Resource Name', 'resource-tracker' ) }
 					value={ name }
 					id={ nameClass }
 					onChange={ ( newName ) => {
@@ -36,8 +36,8 @@ const ResourceSettings = ( props ) => {
 				/>
 			</label>
 			<label htmlFor={ totalClass } className={ totalClass }>
+				<h3>{ __( 'Total Uses', 'resource-tracker' ) }</h3>
 				<TextControl
-					label={ __( 'Total Uses', 'resource-tracker' ) }
 					type="number"
 					value={ total }
 					id={ totalClass }
