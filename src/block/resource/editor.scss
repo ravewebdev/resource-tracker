@@ -1,0 +1,10 @@
+// WordPress editor styles
+
+.resource-settings {
+	align-items: stretch;
+	flex-direction: column;
+
+	label {
+		max-width: unset;
+	}
+}
