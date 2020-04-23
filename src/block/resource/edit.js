@@ -1,7 +1,7 @@
 /**
  * EDIT: Resource Child Block
  */
-import { PanelBody, PanelRow, Button } from '@wordpress/components';
+import { PanelBody, PanelRow } from '@wordpress/components';
 import { InspectorControls } from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
 
