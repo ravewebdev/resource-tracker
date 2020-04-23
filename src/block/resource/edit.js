@@ -57,7 +57,7 @@ const Edit = ( props ) => {
 
 		pool.push(
 			<ResourceCheckbox
-				checked={ i <= used }
+				index={ i }
 				disabled={ disabled }
 				onUpdateResource={ onUpdateResource }
 				used={ used }

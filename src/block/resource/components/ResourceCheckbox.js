@@ -15,8 +15,8 @@ import { useState, useEffect } from '@wordpress/element';
  */
 const ResourceCheckbox = ( props ) => {
 	const {
+		index,
 		disabled,
-		checked,
 		onUpdateResource,
 	} = props;
 	let {
@@ -27,12 +27,13 @@ const ResourceCheckbox = ( props ) => {
 
 	// Set initial checked state from props.
 	useEffect( () => {
-		setChecked( checked );
+		setChecked( index <= used );
 	} );
 
 	return (
 		<CheckboxControl
 			checked={ isChecked }
+			help={ index }
 			className="resource-pool-checkbox"
 			onChange={ () => {
 				setChecked( ! isChecked );
