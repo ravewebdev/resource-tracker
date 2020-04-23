@@ -35,7 +35,7 @@ function register_block() {
 
 	// Verify we have an editor script.
 	if ( ! file_exists( plugin_dir_path( __FILE__ ) . $editor_script ) ) {
-		wp_die( esc_html__( 'Whoops! You need to run `npm run build` for the WDS Block Starter first.', 'resource-tracker' ) );
+		wp_die( esc_html__( 'Whoops! You need to run `npm run build` for Resource Tracker first.', 'resource-tracker' ) );
 	}
 
 	// Autoload dependencies and version.
