@@ -1,7 +1,7 @@
 /**
  * Display resource inputs.
  */
-import { TextControl } from '@wordpress/components';
+import { TextControl, TextareaControl } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
 /**
@@ -16,11 +16,13 @@ import { __ } from '@wordpress/i18n';
 const ResourceSettings = ( props ) => {
 	const {
 		name,
+		description,
 		total,
 		onUpdateResource,
 	} = props;
 
 	const nameClass = 'resource-name';
+	const descriptionClass = 'resource-description';
 	const totalClass = 'resource-total';
 
 	return (
@@ -32,6 +34,17 @@ const ResourceSettings = ( props ) => {
 					id={ nameClass }
 					onChange={ ( newName ) => {
 						onUpdateResource( 'name', newName );
+					} }
+				/>
+			</label>
+			<label htmlFor={ descriptionClass } className={ descriptionClass }>
+				<h3>{ __( 'Description', 'resource-tracker' ) }</h3>
+				<TextareaControl
+					id={ descriptionClass }
+					rows={ 3 }
+					value={ description }
+					onChange={ ( newDescription ) => {
+						onUpdateResource( 'description', newDescription );
 					} }
 				/>
 			</label>

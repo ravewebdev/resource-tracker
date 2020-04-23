@@ -21,6 +21,7 @@ const Edit = ( props ) => {
 	const {
 		attributes: {
 			name,
+			description,
 			total,
 			used,
 		},
@@ -74,6 +75,7 @@ const Edit = ( props ) => {
 					<PanelRow className="resource-settings">
 						<ResourceSettings
 							name={ name }
+							description={ description }
 							total={ total }
 							used={ used }
 							onUpdateResource={ onUpdateResource }
@@ -81,11 +83,10 @@ const Edit = ( props ) => {
 					</PanelRow>
 				</PanelBody>
 			</InspectorControls>
-			<div className={ className }>
-				<p className="resource">
-					<span className="resource-name">{ displayName }</span>
-					<span className="resource-pool">{ pool }</span>
-				</p>
+			<div className={ `${ className } resource` }>
+				<p className="resource-name">{ displayName }</p>
+				<p className="resource-description">{ description }</p>
+				<p className="resource-pool">{ pool }</p>
 			</div>
 		</>
 	);

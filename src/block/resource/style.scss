@@ -2,6 +2,10 @@
 
 .wp-block-rave-resource {
 
+	.resource-description {
+		white-space: pre-line;
+	}
+
 	.resource-pool {
 		display: flex;
 		flex-direction: row;

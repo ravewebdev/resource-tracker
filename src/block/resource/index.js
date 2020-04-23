@@ -20,6 +20,10 @@ registerBlockType( 'rave/resource', {
 			type: 'string',
 			default: '',
 		},
+		description: {
+			type: 'string',
+			default: '',
+		},
 		total: {
 			type: 'integer',
 			default: 1,
