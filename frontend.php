@@ -26,7 +26,7 @@ function render_resource( array $attributes ) : string {
 	$used        = intval( $attributes['used'] );
 	?>
 
-	<div class="resource">
+	<div class="resource wp-block-rave-resource" data-name="<?php echo esc_attr( $name ); ?>" data-description="<?php echo esc_attr( $description ); ?>" data-total="<?php echo esc_attr( $total ); ?>" data-used="<?php echo esc_attr( $used ); ?>">
 		<h3 class="resource-name"><?php echo esc_html( $name ); ?></h3>
 		<p class="resource-pool">
 
