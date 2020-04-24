@@ -11,7 +11,7 @@
  * Domain Path: /languages
  *
  * @package Rave\ResourceTracker
- * @since 1.0.0
+ * @since   1.0.0
  */
 
 namespace Rave\ResourceTracker;
@@ -23,7 +23,7 @@ defined( 'ABSPATH' ) || exit;
  * Register the block with WordPress.
  *
  * @author WebDevStudios
- * @since 1.0.0
+ * @since  1.0.0
  */
 function register_block() {
 
@@ -77,9 +77,10 @@ function register_block() {
 		'style'         => 'resource-tracker-style',
 	) );
 	register_block_type( 'rave/resource', array(
-		'editor_script' => 'resource-tracker-editor-script',
-		'editor_style'  => 'resource-tracker-editor-style',
-		'style'         => 'resource-tracker-style',
+		'editor_script'   => 'resource-tracker-editor-script',
+		'editor_style'    => 'resource-tracker-editor-style',
+		'style'           => 'resource-tracker-style',
+		'render_callback' => __NAMESPACE__ . '\render_resource',
 	) );
 
 	// Register frontend script.
@@ -94,3 +95,6 @@ function register_block() {
 	}
 }
 add_action( 'init', __NAMESPACE__ . '\register_block' );
+
+// Load frontend render via PHP.
+require_once plugin_dir_path( __FILE__ ) . '/frontend.php';
