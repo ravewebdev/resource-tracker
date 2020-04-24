@@ -5,8 +5,8 @@ import { PanelBody, PanelRow } from '@wordpress/components';
 import { InspectorControls } from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
 
+import Resource from './components/Resource';
 import ResourceSettings from './components/ResourceSettings';
-import ResourceCheckbox from './components/ResourceCheckbox';
 
 /**
  * Handle edit functionality in the admin.
@@ -44,27 +44,6 @@ const Edit = ( props ) => {
 		} );
 	};
 
-	// Handle blank resource names.
-	const displayName = 0 === name.length ? __( '(Untitled Resource)', 'resource-tracker' ) : name;
-
-	// Create list of checkboxes to track total/used resources.
-	const pool = [];
-
-	for ( let i = 1; i <= total; i++ ) {
-
-		// Mark unchecked checkboxes as disabled except first checkbox after last checked checkbox.
-		const disabled = i > ( used + 1 );
-
-		pool.push(
-			<ResourceCheckbox
-				index={ i }
-				disabled={ disabled }
-				onUpdateResource={ onUpdateResource }
-				used={ used }
-			/>
-		);
-	}
-
 	return (
 		<>
 			<InspectorControls>
@@ -83,11 +62,14 @@ const Edit = ( props ) => {
 					</PanelRow>
 				</PanelBody>
 			</InspectorControls>
-			<div className={ `${ className } resource` }>
-				<h3 className="resource-name">{ displayName }</h3>
-				<p className="resource-pool">{ pool }</p>
-				<p className="resource-description">{ description }</p>
-			</div>
+			<Resource
+				className={ className }
+				name={ name }
+				description={ description }
+				total={ total }
+				used={ used }
+				onUpdateResource={ onUpdateResource }
+			/>
 		</>
 	);
 };
