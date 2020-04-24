@@ -1,5 +1,5 @@
 /**
- * Display resource uses checkbox.
+ * Display resource pool checkbox.
  */
 import { CheckboxControl } from '@wordpress/components';
 import { useState, useEffect } from '@wordpress/element';
@@ -16,11 +16,9 @@ import { useState, useEffect } from '@wordpress/element';
 const ResourceCheckbox = ( props ) => {
 	const {
 		index,
+		used,
 		disabled,
 		onUpdateResource,
-	} = props;
-	let {
-		used,
 	} = props;
 
 	const [ isChecked, setChecked ] = useState( false );
@@ -37,8 +35,7 @@ const ResourceCheckbox = ( props ) => {
 			className="resource-pool-checkbox"
 			onChange={ () => {
 				setChecked( ! isChecked );
-				used = ! isChecked ? used + 1 : used - 1;
-				onUpdateResource( 'used', used );
+				onUpdateResource( 'used', ! isChecked ? used + 1 : used - 1 );
 			} }
 			disabled={ disabled }
 		/>
