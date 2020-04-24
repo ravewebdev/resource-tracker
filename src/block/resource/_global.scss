@@ -5,11 +5,23 @@ $color-grey: #6c7781;
 
 @mixin checkbox {
 	background: none;
-	border-color: $color-grey;
+	border: 2px solid $color-grey;
+	border-radius: 2px;
+	height: 3rem;
+	position: relative;
+	width: 3rem;
+
+	&:disabled {
+		opacity: 0.5;
+	}
 }
 
 @mixin checkmark {
 	color: $color-black;
 	content: '\2717';
-	margin: -0.5rem 0 0 -0.125rem;
+	font-family: initial;
+	font-size: 4.25rem;
+	left: 0.2rem;
+	position: absolute;
+	top: -0.2rem;
 }

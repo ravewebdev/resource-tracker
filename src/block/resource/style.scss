@@ -10,6 +10,7 @@
 	}
 
 	.resource-description {
+		margin-top: 0.5rem;
 		white-space: pre-line;
 	}
 
@@ -21,12 +22,12 @@
 
 	.resource-pool-checkbox {
 		margin-bottom: 0;
-		margin-right: 1rem;
+		margin-right: 3rem;
 
-		&:checked {
+		input[type='checkbox'] {
 			@include checkbox;
 
-			&::before {
+			&:checked::before {
 				@include checkmark;
 			}
 		}
@@ -36,6 +37,9 @@
 		}
 
 		.components-base-control__help {
+			font-size: 1.5rem;
+			font-style: italic;
+			line-height: 1;
 			text-align: center;
 		}
 
