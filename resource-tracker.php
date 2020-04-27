@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Resource Tracker
- * Description: A block plugin for tracking resource usage in Table-Top Role-Playing Games.
+ * Description: A block plugin for tracking usage of limited resources in Table-Top Role-Playing Games.
  * Author:      R A Van Epps
  * Author URI:  https://ravanepps.com
  * Version:     1.0.0
@@ -72,15 +72,10 @@ function register_block() {
 
 	// Register blocks with WordPress.
 	register_block_type( 'rave/resource-tracker', array(
-		'editor_script' => 'resource-tracker-editor-script',
-		'editor_style'  => 'resource-tracker-editor-style',
-		'style'         => 'resource-tracker-style',
-	) );
-	register_block_type( 'rave/resource', array(
 		'editor_script'   => 'resource-tracker-editor-script',
 		'editor_style'    => 'resource-tracker-editor-style',
 		'style'           => 'resource-tracker-style',
-		'render_callback' => __NAMESPACE__ . '\render_resource',
+		'render_callback' => __NAMESPACE__ . '\render_resource_tracker',
 	) );
 
 	// Register frontend script.

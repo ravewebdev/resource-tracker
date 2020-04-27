@@ -18,18 +18,18 @@ namespace Rave\ResourceTracker;
  * @param  array $attributes Resource block attributes.
  * @return string            HTML to render for block.
  */
-function render_resource( array $attributes ) : string {
+function render_resource_tracker( array $attributes ) : string {
 	$id          = $attributes['id'];
 	$name        = $attributes['name'] ?? esc_html__( '(Untitled Resource)', 'resource-tracker' );
 	$description = $attributes['description'] ?? '';
-	$total       = intval( $attributes['total'] );
-	$used        = intval( $attributes['used'] );
+	$total       = intval( $attributes['total'] ?? 1 );
+	$used        = intval( $attributes['used'] ?? 0 );
 
 	ob_start();
 	?>
 
 	<div
-		class="resource wp-block-rave-resource"
+		class="resource wp-block-rave-resource-tracker"
 		data-id="<?php echo esc_attr( $id ); ?>"
 		data-name="<?php echo esc_attr( $name ); ?>"
 		data-description="<?php echo esc_attr( $description ); ?>"

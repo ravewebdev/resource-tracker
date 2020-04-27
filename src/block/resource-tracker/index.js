@@ -1,5 +1,5 @@
 /**
- * REGISTER: Resource Tracker Block.
+ * REGISTER: Resource Counter Block.
  */
 import { __ } from '@wordpress/i18n';
 import { registerBlockType } from '@wordpress/blocks';
@@ -15,8 +15,25 @@ registerBlockType( 'rave/resource-tracker', {
 		__( 'ability spell resource tracker', 'resource-tracker' ),
 	],
 	attributes: {
-		resources: {
-			type: 'array',
+		id: {
+			type: 'string',
+			default: '',
+		},
+		name: {
+			type: 'string',
+			default: '',
+		},
+		description: {
+			type: 'string',
+			default: '',
+		},
+		total: {
+			type: 'integer',
+			default: 1,
+		},
+		used: {
+			type: 'integer',
+			default: 0,
 		},
 	},
 	edit,
