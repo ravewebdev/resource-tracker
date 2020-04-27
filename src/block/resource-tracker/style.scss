@@ -30,6 +30,10 @@
 			&:checked::before {
 				@include checkmark;
 			}
+
+			&:disabled {
+				cursor: not-allowed;
+			}
 		}
 
 		* {

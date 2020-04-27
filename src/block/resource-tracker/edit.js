@@ -76,6 +76,7 @@ const Edit = ( props ) => {
 				total={ total }
 				used={ used }
 				onUpdateResource={ onUpdateResource }
+				isEditing={ true }
 			/>
 		</>
 	);
