@@ -16,6 +16,10 @@ registerBlockType( 'rave/resource', {
 		__( 'ability spell resource', 'resource-tracker' ),
 	],
 	attributes: {
+		id: {
+			type: 'string',
+			default: '',
+		},
 		name: {
 			type: 'string',
 			default: '',

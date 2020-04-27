@@ -20,11 +20,13 @@ import ResourceSettings from './components/ResourceSettings';
 const Edit = ( props ) => {
 	const {
 		attributes: {
+			id,
 			name,
 			description,
 			total,
 			used,
 		},
+		clientId,
 		className,
 		setAttributes,
 	} = props;
@@ -43,6 +45,11 @@ const Edit = ( props ) => {
 			[ attribute ]: value,
 		} );
 	};
+
+	// Update id attr when clientId changes.
+	if ( clientId !== id ) {
+		onUpdateResource( 'id', clientId );
+	}
 
 	return (
 		<>

@@ -19,6 +19,7 @@ namespace Rave\ResourceTracker;
  * @return string            HTML to render for block.
  */
 function render_resource( array $attributes ) : string {
+	$id          = $attributes['id'];
 	$name        = $attributes['name'] ?? esc_html__( '(Untitled Resource)', 'resource-tracker' );
 	$description = $attributes['description'] ?? '';
 	$total       = intval( $attributes['total'] );
@@ -27,7 +28,14 @@ function render_resource( array $attributes ) : string {
 	ob_start();
 	?>
 
-	<div class="resource wp-block-rave-resource" data-name="<?php echo esc_attr( $name ); ?>" data-description="<?php echo esc_attr( $description ); ?>" data-total="<?php echo esc_attr( $total ); ?>" data-used="<?php echo esc_attr( $used ); ?>">
+	<div
+		class="resource wp-block-rave-resource"
+		data-id="<?php echo esc_attr( $id ); ?>"
+		data-name="<?php echo esc_attr( $name ); ?>"
+		data-description="<?php echo esc_attr( $description ); ?>"
+		data-total="<?php echo esc_attr( $total ); ?>"
+		data-used="<?php echo esc_attr( $used ); ?>"
+	>
 		<h3 class="resource-name"><?php echo esc_html( $name ); ?></h3>
 		<p class="resource-pool">
 
