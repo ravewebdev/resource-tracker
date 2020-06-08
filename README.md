@@ -13,10 +13,12 @@ Built with [WDS Block Starter](https://github.com/WebDevStudios/wds-block-starte
 4. Set the Resource name and total uses available.
 5. Save and view your page or post.
 6. Use the Resource's checkboxes to track usage.
+7. Use the Reset button to reset usage back to 0.
 
 ## Frequently Asked Questions ##
 
 ### How should I use this block? ###
+Use this block to track fixed-usage resources, such as spells or special abilities. Click a checkbox to mark one use, until all uses are gone! Then, you can click Reset to regain full usage of the resource, e.g., after a rest.
 
 ### How can I report issues or suggest improvements? ###
 Feel free to create an issue or PR in the [Github repo here](https://github.com/ravewebdev/resource-tracker).
