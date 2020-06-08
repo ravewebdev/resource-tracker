@@ -1,6 +1,7 @@
 /**
  * Display resource on frontend.
  */
+const { apiFetch } = wp;
 const {
 	useState,
 	useEffect,
@@ -41,11 +42,25 @@ const FrontendResource = ( props ) => {
 	 * @param  {string} attribute Attribute name.
 	 * @param  {mixed}  value     New value for attribute.
 	 */
-	const onUpdateResource = ( attribute, value ) => {
-		setAttributes( {
+	const onUpdateResource = async ( attribute, value ) => {
+		const newAttributes = {
 			...attributes,
 			[ attribute ]: value,
-		} );
+		};
+
+		// Save updates.
+		const response = await apiFetch( {
+			path: `/rave-resource/v1/pool/${ dataAttributes.post_id }`,
+			method: 'POST',
+			data: {
+				...newAttributes,
+			},
+		} )
+			.then( ( success ) => success )
+			.catch( ( error ) => error );
+
+		setAttributes( { ...newAttributes } );
+		console.log( 'response', response );
 	};
 
 	return (
