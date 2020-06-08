@@ -94,4 +94,4 @@ function register_block() {
 add_action( 'init', __NAMESPACE__ . '\register_block' );
 
 // Load frontend render via PHP.
-require_once plugin_dir_path( __FILE__ ) . '/frontend.php';
+require_once plugin_dir_path( __FILE__ ) . '/includes/frontend.php';
