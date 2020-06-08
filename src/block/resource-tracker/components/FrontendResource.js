@@ -1,6 +1,9 @@
 /**
  * Display resource on frontend.
  */
+import { Dashicon } from '@wordpress/components';
+import { __ } from '@wordpress/i18n';
+
 const { apiFetch } = wp;
 const {
 	useState,
@@ -63,13 +66,19 @@ const FrontendResource = ( props ) => {
 	};
 
 	return (
-		<Resource
-			className={ className }
-			name={ name }
-			total={ total }
-			used={ used }
-			onUpdateResource={ onUpdateResource }
-		/>
+		<>
+			<Resource
+				className={ className }
+				name={ name }
+				total={ total }
+				used={ used }
+				onUpdateResource={ onUpdateResource }
+			/>
+			<button className="reset-button">
+				<Dashicon icon="update" />
+				{ __( 'Reset', 'resource-tracker' ) }
+			</button>
+		</>
 	);
 };
 

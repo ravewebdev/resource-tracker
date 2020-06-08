@@ -53,4 +53,14 @@
 			display: none;
 		}
 	}
+
+	.reset-button {
+		margin-top: 1rem;
+
+		svg {
+			display: inline-block;
+			margin-right: 0.5rem;
+			vertical-align: sub;
+		}
+	}
 }
