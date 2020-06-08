@@ -7,8 +7,8 @@ const {
 
 import FrontendResource from './components/FrontendResource';
 
-const resourceClass = '.wp-block-rave-resource-tracker';
-const resources = document.querySelectorAll( resourceClass );
+const resourceClass = 'wp-block-rave-resource-tracker';
+const resources = document.querySelectorAll( `.${ resourceClass }` );
 
 /**
  * Retrieve and re-render resource tracker blocks.
