@@ -25,6 +25,12 @@ Feel free to create an issue or PR in the [Github repo here](https://github.com/
 
 ## Screenshots ##
 
+### Admin Demo ###
+![Admin Demo](assets/screenshot-1.gif)
+
+### Frontend Demo ###
+![Frontend Demo](assets/screenshot-2.gif)
+
 ## Changelog ##
 
 ### 1.0.0 ###

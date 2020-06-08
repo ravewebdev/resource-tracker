@@ -31,6 +31,8 @@ Use this block to track fixed-usage resources, such as spells or special abiliti
 Feel free to create an issue or PR in the [Github repo here](https://github.com/ravewebdev/resource-tracker).
 
 == Screenshots ==
+1. Admin Demo.
+2. Frontend Demo.
 
 == Changelog ==
 = 1.0.0 =
