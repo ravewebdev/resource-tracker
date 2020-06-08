@@ -74,7 +74,12 @@ const FrontendResource = ( props ) => {
 				used={ used }
 				onUpdateResource={ onUpdateResource }
 			/>
-			<button className="reset-button">
+			<button
+				className="reset-button"
+				onClick={ () => {
+					onUpdateResource( 'used', 0 );
+				} }
+			>
 				<Dashicon icon="update" />
 				{ __( 'Reset', 'resource-tracker' ) }
 			</button>
