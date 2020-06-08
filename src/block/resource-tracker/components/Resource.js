@@ -22,6 +22,7 @@ const Resource = ( props ) => {
 		used,
 		onUpdateResource,
 		isEditing,
+		isLoading,
 	} = props;
 
 	// Handle blank resource names.
@@ -33,7 +34,7 @@ const Resource = ( props ) => {
 	for ( let i = 1; i <= total; i++ ) {
 
 		// Mark unchecked checkboxes as disabled except first checkbox after last checked checkbox.
-		const disabled = ( i > ( used + 1 ) ) || isEditing;
+		const disabled = ( i > ( used + 1 ) ) || isEditing || isLoading;
 
 		pool.push(
 			<ResourceCheckbox

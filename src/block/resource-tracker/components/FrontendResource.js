@@ -18,6 +18,8 @@ const FrontendResource = ( props ) => {
 		className,
 	} = props;
 
+	const [ isLoading, setLoading ] = useState( false );
+
 	const [ attributes, setAttributes ] = useState( {
 		name: '',
 		total: 1,
@@ -46,6 +48,8 @@ const FrontendResource = ( props ) => {
 	 * @param  {mixed}  value     New value for attribute.
 	 */
 	const onUpdateResource = async ( attribute, value ) => {
+		setLoading( true );
+
 		const newAttributes = {
 			...attributes,
 			[ attribute ]: value,
@@ -63,6 +67,7 @@ const FrontendResource = ( props ) => {
 			.catch( ( error ) => error );
 
 		setAttributes( { ...newAttributes } );
+		setLoading( false );
 	};
 
 	return (
@@ -73,12 +78,14 @@ const FrontendResource = ( props ) => {
 				total={ total }
 				used={ used }
 				onUpdateResource={ onUpdateResource }
+				isLoading={ isLoading }
 			/>
 			<button
 				className="reset-button"
 				onClick={ () => {
 					onUpdateResource( 'used', 0 );
 				} }
+				disabled={ isLoading }
 			>
 				<Dashicon icon="update" />
 				{ __( 'Reset', 'resource-tracker' ) }

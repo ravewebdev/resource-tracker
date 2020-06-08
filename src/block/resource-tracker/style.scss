@@ -62,5 +62,9 @@
 			margin-right: 0.5rem;
 			vertical-align: sub;
 		}
+
+		&:disabled {
+			cursor: not-allowed;
+		}
 	}
 }
