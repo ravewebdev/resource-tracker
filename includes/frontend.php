@@ -33,7 +33,7 @@ function render_resource_tracker( array $attributes ) : string {
 		data-name="<?php echo esc_attr( $name ); ?>"
 		data-total="<?php echo esc_attr( $total ); ?>"
 		data-used="<?php echo esc_attr( $used ); ?>"
-		data-page_id="<?php echo esc_attr( get_the_ID() ); ?>"
+		data-post_id="<?php echo esc_attr( get_the_ID() ); ?>"
 	>
 		<h3 class="resource-name"><?php echo esc_html( $name ); ?></h3>
 		<p class="resource-pool">

@@ -23,7 +23,7 @@ resources.forEach( ( resource ) => {
 		name: resource.dataset.name,
 		total: parseInt( resource.dataset.total, 10 ),
 		used: parseInt( resource.dataset.used, 10 ),
-		pageId: parseInt( resource.dataset.page_id, 10 ),
+		post_id: parseInt( resource.dataset.post_id, 10 ),
 	};
 
 	render(
