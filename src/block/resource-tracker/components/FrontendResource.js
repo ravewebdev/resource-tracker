@@ -49,7 +49,7 @@ const FrontendResource = ( props ) => {
 		};
 
 		// Save updates.
-		const response = await apiFetch( {
+		await apiFetch( {
 			path: `/rave-resource/v1/pool/${ dataAttributes.post_id }`,
 			method: 'POST',
 			data: {
@@ -60,7 +60,6 @@ const FrontendResource = ( props ) => {
 			.catch( ( error ) => error );
 
 		setAttributes( { ...newAttributes } );
-		console.log( 'response', response );
 	};
 
 	return (

@@ -9,10 +9,11 @@
 
 namespace Rave\ResourceTracker;
 
-use \WP_REST_SERVER;
+use \WP_Block_Parser_Block;
+use \WP_Error;
 use \WP_REST_Request;
 use \WP_REST_Response;
-use \WP_Error;
+use \WP_REST_SERVER;
 
 /**
  * Class Routes
@@ -110,7 +111,30 @@ class Routes {
 	 * @return WP_Error|WP_REST_Response WP_REST_Response if data retrieval successful, WP_Error otherwise.
 	 */
 	public function update_resource_usage( WP_REST_Request $request ) {
-		return new WP_REST_Response( 'success', 200 );
+		$block_id     = $request->get_param( 'block_id' );
+		$post_id      = $request->get_param( 'post_id' );
+		$used         = $request->get_param( 'used' );
+		$post_content = get_post_field( 'post_content', $post_id );
+		$post_blocks  = parse_blocks( $post_content );
+
+		// Update usage count for target block.
+		$post_blocks = array_map( function( $block ) use ( $block_id, $used ) {
+			if ( 'rave/resource-tracker' !== ( $block['blockName'] ?? '' ) || ( $block['attrs']['id'] ?? 0 ) !== $block_id ) {
+				return $block;
+			}
+
+			$block['attrs']['used'] = $used;
+
+			return $block;
+		}, $post_blocks );
+
+		// Update post content.
+		wp_update_post( [
+			'ID'           => $post_id,
+			'post_content' => serialize_blocks( $post_blocks ),
+		] );
+
+		return new WP_REST_Response( __( 'Resource usage updated.', 'resource-tracker' ), 200 );
 	}
 
 	/**
