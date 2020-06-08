@@ -16,13 +16,11 @@ const FrontendResource = ( props ) => {
 
 	const [ attributes, setAttributes ] = useState( {
 		name: '',
-		description: '',
 		total: 1,
 		used: 0,
 	} );
 	const {
 		name,
-		description,
 		total,
 		used,
 	} = attributes;
@@ -54,7 +52,6 @@ const FrontendResource = ( props ) => {
 		<Resource
 			className={ className }
 			name={ name }
-			description={ description }
 			total={ total }
 			used={ used }
 			onUpdateResource={ onUpdateResource }

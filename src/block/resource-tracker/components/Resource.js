@@ -18,7 +18,6 @@ const Resource = ( props ) => {
 	const {
 		className,
 		name,
-		description,
 		total,
 		used,
 		onUpdateResource,
@@ -50,7 +49,6 @@ const Resource = ( props ) => {
 		<div className={ `${ className } resource` }>
 			<h3 className="resource-name">{ displayName }</h3>
 			<p className="resource-pool">{ pool }</p>
-			<p className="resource-description">{ description }</p>
 		</div>
 	);
 };

@@ -22,7 +22,6 @@ const Edit = ( props ) => {
 		attributes: {
 			id,
 			name,
-			description,
 			total,
 			used,
 		},
@@ -61,7 +60,6 @@ const Edit = ( props ) => {
 					<PanelRow className="resource-settings">
 						<ResourceSettings
 							name={ name }
-							description={ description }
 							total={ total }
 							used={ used }
 							onUpdateResource={ onUpdateResource }
@@ -72,7 +70,6 @@ const Edit = ( props ) => {
 			<Resource
 				className={ className }
 				name={ name }
-				description={ description }
 				total={ total }
 				used={ used }
 				onUpdateResource={ onUpdateResource }

@@ -10,7 +10,7 @@ Built with [WDS Block Starter](https://github.com/WebDevStudios/wds-block-starte
 1. Upload the `resource-tracker` folder to the `/wp-content/plugins` directory.
 2. Activate the Resource Tracker plugin through the 'Plugins' menu in WordPress.
 3. Add the 'Resource Tracker' block in a post or page.
-4. Set the Resource name, total uses available, and an optional description.
+4. Set the Resource name and total uses available.
 5. Save and view your page or post.
 6. Use the Resource's checkboxes to track usage.
 

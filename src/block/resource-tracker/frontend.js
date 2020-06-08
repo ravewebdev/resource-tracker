@@ -21,7 +21,6 @@ const resources = document.querySelectorAll( resourceClass );
 resources.forEach( ( resource ) => {
 	const attributes = {
 		name: resource.dataset.name,
-		description: resource.dataset.description,
 		total: parseInt( resource.dataset.total, 10 ),
 		used: parseInt( resource.dataset.used, 10 ),
 	};

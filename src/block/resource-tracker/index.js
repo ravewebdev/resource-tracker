@@ -23,10 +23,6 @@ registerBlockType( 'rave/resource-tracker', {
 			type: 'string',
 			default: '',
 		},
-		description: {
-			type: 'string',
-			default: '',
-		},
 		total: {
 			type: 'integer',
 			default: 1,

@@ -19,11 +19,10 @@ namespace Rave\ResourceTracker;
  * @return string            HTML to render for block.
  */
 function render_resource_tracker( array $attributes ) : string {
-	$id          = $attributes['id'];
-	$name        = $attributes['name'] ?? esc_html__( '(Untitled Resource)', 'resource-tracker' );
-	$description = $attributes['description'] ?? '';
-	$total       = intval( $attributes['total'] ?? 1 );
-	$used        = intval( $attributes['used'] ?? 0 );
+	$id    = $attributes['id'];
+	$name  = $attributes['name'] ?? esc_html__( '(Untitled Resource)', 'resource-tracker' );
+	$total = intval( $attributes['total'] ?? 1 );
+	$used  = intval( $attributes['used'] ?? 0 );
 
 	ob_start();
 	?>
@@ -32,7 +31,6 @@ function render_resource_tracker( array $attributes ) : string {
 		class="resource wp-block-rave-resource-tracker"
 		data-id="<?php echo esc_attr( $id ); ?>"
 		data-name="<?php echo esc_attr( $name ); ?>"
-		data-description="<?php echo esc_attr( $description ); ?>"
 		data-total="<?php echo esc_attr( $total ); ?>"
 		data-used="<?php echo esc_attr( $used ); ?>"
 	>
@@ -49,10 +47,6 @@ function render_resource_tracker( array $attributes ) : string {
 			<?php endfor; ?>
 
 		</p>
-
-		<?php if ( ! empty( $description ) ) : ?>
-			<p class="resource-description"><?php echo esc_html( $description ); ?></p>
-		<?php endif; ?>
 	</div>
 
 	<?php
