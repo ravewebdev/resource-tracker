@@ -25,7 +25,7 @@ const Resource = ( props ) => {
 	} = props;
 
 	// Handle blank resource names.
-	const displayName = 0 === name.length ? __( '(Untitled Resource)', 'resource-tracker' ) : name;
+	let displayName = 0 === name.length ? __( '(Untitled Resource)', 'resource-tracker' ) : name;
 
 	// Create list of checkboxes to track total/used resources.
 	const pool = [];
@@ -45,9 +45,16 @@ const Resource = ( props ) => {
 		);
 	}
 
+	// Check if resource has been used up (pool empty) and add strikethrough if true.
+	if ( used === total ) {
+		displayName = <s>{ displayName }</s>;
+	}
+
 	return (
-		<div className={ `${ className } resource` }>
-			<h3 className="resource-name">{ displayName }</h3>
+		<div className={ `${ className } resource ${ used === total ? 'empty' : '' }` }>
+			<h3 className="resource-name">
+				{ displayName }
+			</h3>
 			<p className="resource-pool">{ pool }</p>
 		</div>
 	);

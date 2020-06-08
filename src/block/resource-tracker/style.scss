@@ -4,6 +4,10 @@
 
 .wp-block-rave-resource-tracker {
 
+	&.empty {
+		opacity: 0.5;
+	}
+
 	.resource-pool {
 		margin: 0;
 	}
