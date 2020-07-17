@@ -1,6 +1,7 @@
 /**
- * FRONTEND: Resource Child Block
+ * FRONTEND: Resource Tracker Block
  */
+
 const {
 	render,
 } = wp.element;

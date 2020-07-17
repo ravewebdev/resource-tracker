@@ -1,6 +1,6 @@
 <?php
 /**
- * Render block contents via frontend.
+ * Render block contents on frontend.
  *
  * @package Rave\ResourceTracker
  * @author  R A Van Epps <rave@ravanepps.com>
@@ -10,7 +10,7 @@
 namespace Rave\ResourceTracker;
 
 /**
- * Render block on frontend.
+ * Render resource tracker block on frontend.
  *
  * @author R A Van Epps <rave@ravanepps.com>
  * @since  1.0.0
