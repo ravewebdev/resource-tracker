@@ -126,7 +126,7 @@ class Routes {
 	/**
 	 * Check if current user has proper permissions to update post.
 	 *
-	 * @author Rebekah Van Epps <rebekah.vanepps@webdevstudios.com>
+	 * @author R A Van Epps <rave@ravanepps.com>
 	 * @since  NEXT
 	 *
 	 * @param  WP_REST_Request $request WP_Rest_Request object.
