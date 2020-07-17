@@ -40,6 +40,9 @@ Feel free to create an issue or PR in the [Github repo here](https://github.com/
 
 == Changelog ==
 
+= 1.1.1 =
+* Fixed: Changed checkbox mark color to inherit current text color for better accessibility.
+
 = 1.1.0 =
 * Added: Implemented permissions check callback for custom route.
 * Updated: Cleaned up code, comments to be more in line with similar blocks (e.g., Initiative Tracker).
