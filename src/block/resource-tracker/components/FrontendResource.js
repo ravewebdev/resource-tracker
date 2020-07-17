@@ -2,6 +2,8 @@
  * Display resource on frontend.
  */
 
+/* global resourceTracker */
+
 import Resource from './Resource';
 
 const {
@@ -74,7 +76,7 @@ const FrontendResource = ( props ) => {
 
 		// Save updates.
 		await apiFetch( {
-			path: `/rave-resource/v1/pool/${ dataAttributes.post_id }`,
+			path: `${ resourceTracker.pool }/${ dataAttributes.post_id }`,
 			method: 'POST',
 			data: {
 				...newAttributes,
