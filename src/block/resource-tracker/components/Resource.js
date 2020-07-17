@@ -61,7 +61,7 @@ const Resource = ( props ) => {
 			<h3 className="resource-name">
 				{ displayName }
 			</h3>
-			<p className="resource-pool">{ pool }</p>
+			<div className="resource-pool">{ pool }</div>
 		</div>
 	);
 };

@@ -36,7 +36,7 @@ function render_block( array $attributes ) : string {
 		data-post_id="<?php echo esc_attr( get_the_ID() ); ?>"
 	>
 		<h3 class="resource-name"><?php echo esc_html( $name ); ?></h3>
-		<p class="resource-pool">
+		<div class="resource-pool">
 
 			<?php for ( $i = 1; $i <= $total; $i++ ) : ?>
 				<input
@@ -47,7 +47,7 @@ function render_block( array $attributes ) : string {
 				/>
 			<?php endfor; ?>
 
-		</p>
+		</div>
 	</div>
 
 	<?php
