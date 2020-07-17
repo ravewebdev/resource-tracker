@@ -75,7 +75,7 @@ function register_block() {
 		'editor_script'   => 'resource-tracker-editor-script',
 		'editor_style'    => 'resource-tracker-editor-style',
 		'style'           => 'resource-tracker-style',
-		'render_callback' => __NAMESPACE__ . '\render_resource_tracker',
+		'render_callback' => __NAMESPACE__ . '\render_block',
 	) );
 
 	// Register frontend script.

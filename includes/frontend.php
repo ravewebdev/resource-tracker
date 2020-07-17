@@ -18,7 +18,7 @@ namespace Rave\ResourceTracker;
  * @param  array $attributes Resource block attributes.
  * @return string            HTML to render for block.
  */
-function render_resource_tracker( array $attributes ) : string {
+function render_block( array $attributes ) : string {
 	$id    = $attributes['id'];
 	$name  = $attributes['name'] ?? esc_html__( '(Untitled Resource)', 'resource-tracker' );
 	$total = intval( $attributes['total'] ?? 1 );
