@@ -1,16 +1,22 @@
 /**
  * Display resource on frontend.
  */
-import { Dashicon } from '@wordpress/components';
-import { __ } from '@wordpress/i18n';
-
-const { apiFetch } = wp;
-const {
-	useState,
-	useEffect,
-} = wp.element;
 
 import Resource from './Resource';
+
+const {
+	apiFetch,
+	i18n: {
+		__,
+	},
+	components: {
+		Dashicon,
+	},
+	element: {
+		useEffect,
+		useState,
+	},
+} = wp;
 
 const FrontendResource = ( props ) => {
 	const {

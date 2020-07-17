@@ -2,11 +2,13 @@
  * FRONTEND: Resource Tracker Block
  */
 
-const {
-	render,
-} = wp.element;
-
 import FrontendResource from './components/FrontendResource';
+
+const {
+	element: {
+		render,
+	},
+} = wp;
 
 const resourceClass = 'wp-block-rave-resource-tracker';
 const resources = document.querySelectorAll( `.${ resourceClass }` );

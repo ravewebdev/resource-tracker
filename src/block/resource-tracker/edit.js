@@ -2,12 +2,21 @@
  * EDIT: Resource Counter Block
  */
 
-import { PanelBody, PanelRow } from '@wordpress/components';
-import { InspectorControls } from '@wordpress/block-editor';
-import { __ } from '@wordpress/i18n';
-
 import Resource from './components/Resource';
 import ResourceSettings from './components/ResourceSettings';
+
+const {
+	i18n: {
+		__,
+	},
+	components: {
+		PanelBody,
+		PanelRow,
+	},
+	editor: {
+		InspectorControls,
+	},
+} = wp;
 
 /**
  * Handle edit functionality in the admin.

@@ -1,9 +1,14 @@
 /**
  * Display rendered resource.
  */
-import { __ } from '@wordpress/i18n';
 
 import ResourceCheckbox from './ResourceCheckbox';
+
+const {
+	i18n: {
+		__,
+	},
+} = wp;
 
 /**
  * Handle render of individual resource.

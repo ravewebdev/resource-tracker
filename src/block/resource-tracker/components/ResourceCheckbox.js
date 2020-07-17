@@ -1,8 +1,16 @@
 /**
  * Display resource pool checkbox.
  */
-import { CheckboxControl } from '@wordpress/components';
-import { useState, useEffect } from '@wordpress/element';
+
+const {
+	components: {
+		CheckboxControl,
+	},
+	element: {
+		useEffect,
+		useState,
+	},
+} = wp;
 
 /**
  * Handle render of resource pool checkbox.
