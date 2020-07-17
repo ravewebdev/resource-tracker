@@ -43,6 +43,7 @@ const Resource = ( props ) => {
 
 		pool.push(
 			<ResourceCheckbox
+				key={ i }
 				index={ i }
 				disabled={ disabled }
 				onUpdateResource={ onUpdateResource }
