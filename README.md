@@ -33,5 +33,12 @@ Feel free to create an issue or PR in the [Github repo here](https://github.com/
 
 ## Changelog ##
 
+### 1.1.0 ###
+* Added: Implemented permissions check callback for custom route.
+* Updated: Cleaned up code, comments to be more in line with similar blocks (e.g., Initiative Tracker).
+* Updated: Changed checkbox wrapper tag from `p` to `div`.
+* Fixed: Changed block ID to update only at creation to avoid false-positive post "changes."
+* Fixed: Added key prop to checkboxes to address React warnings.
+
 ### 1.0.0 ###
 Added: Create Resource Tracker block.
