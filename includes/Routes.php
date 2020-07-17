@@ -90,6 +90,7 @@ class Routes {
 	 */
 	private function register_hooks() {
 		add_action( 'rest_api_init', [ $this, 'register_routes' ] );
+		add_action( 'wp_enqueue_scripts', [ $this, 'localize_routes' ], 20 );
 	}
 
 	/**
@@ -100,6 +101,26 @@ class Routes {
 	 */
 	public function register_routes() {
 		array_map( [ $this, 'register_route' ], array_keys( $this->routes ) );
+	}
+
+	/**
+	 * Localize script vars for REST routing.
+	 *
+	 * @author R A Van Epps <rave@ravanepps.com>
+	 * @since  NEXT
+	 */
+	public function localize_routes() {
+
+		// Return nulled array if user doesn't have permission to access REST API.
+		$has_access = $this->current_user_can_access_rest( get_the_ID() ?? 0 );
+
+		$vars = [];
+
+		foreach ( array_keys( $this->routes ) as $route ) {
+			$vars[ $route ] = $has_access ? implode( $this->get_route_pieces( $route ) ) : null;
+		}
+
+		wp_localize_script( 'resource-tracker-frontend-script', 'resourceTracker', $vars );
 	}
 
 	/**
