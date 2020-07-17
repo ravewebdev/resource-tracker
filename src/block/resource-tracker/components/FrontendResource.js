@@ -36,10 +36,12 @@ const FrontendResource = ( props ) => {
 	const [ isLoading, setLoading ] = useState( false );
 
 	const [ attributes, setAttributes ] = useState( {
+		block_id: 0,
 		name: '',
 		total: 1,
 		used: 0,
 	} );
+
 	const {
 		name,
 		total,
