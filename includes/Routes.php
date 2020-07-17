@@ -107,7 +107,7 @@ class Routes {
 	 * Localize script vars for REST routing.
 	 *
 	 * @author R A Van Epps <rave@ravanepps.com>
-	 * @since  NEXT
+	 * @since  1.1.0
 	 */
 	public function localize_routes() {
 
@@ -127,7 +127,7 @@ class Routes {
 	 * Check if current user has proper permissions to update post.
 	 *
 	 * @author R A Van Epps <rave@ravanepps.com>
-	 * @since  NEXT
+	 * @since  1.1.0
 	 *
 	 * @param  WP_REST_Request $request WP_Rest_Request object.
 	 * @return bool                     Whether current user has proper permissions
@@ -217,7 +217,7 @@ class Routes {
 	 * Determine if current user has permissions to access REST API.
 	 *
 	 * @author R A Van Epps <rave@ravanepps.com>
-	 * @since  NEXT
+	 * @since  1.1.0
 	 *
 	 * @param  int $post_id Post ID.
 	 * @return bool         Whether current user can access REST API.
