@@ -18,6 +18,15 @@ const {
 	},
 } = wp;
 
+/**
+ * Frontend Resource Tracker.
+ *
+ * @author R A Van Epps <rave@ravanepps.com>
+ * @since  1.0.0
+ *
+ * @param  {Object} props Component props.
+ * @return {ReactElement} Component render JSX.
+ */
 const FrontendResource = ( props ) => {
 	const {
 		dataAttributes,
