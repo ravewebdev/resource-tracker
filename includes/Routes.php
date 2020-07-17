@@ -72,9 +72,10 @@ class Routes {
 				'uses_id' => true,
 				'version' => 1,
 				'args'    => [
-					'methods'  => WP_REST_SERVER::EDITABLE,
-					'callback' => [ $this, 'update_resource_usage' ],
-					'args'     => [],
+					'methods'             => WP_REST_SERVER::EDITABLE,
+					'callback'            => [ $this, 'update_resource_usage' ],
+					'permission_callback' => [ $this, 'check_resource_permissions' ],
+					'args'                => [],
 				],
 			],
 		];
@@ -99,6 +100,19 @@ class Routes {
 	 */
 	public function register_routes() {
 		array_map( [ $this, 'register_route' ], array_keys( $this->routes ) );
+	}
+
+	/**
+	 * Check if current user has proper permissions to update post.
+	 *
+	 * @author Rebekah Van Epps <rebekah.vanepps@webdevstudios.com>
+	 * @since  NEXT
+	 *
+	 * @param  WP_REST_Request $request WP_Rest_Request object.
+	 * @return bool                     Whether current user has proper permissions
+	 */
+	public function check_resource_permissions( WP_REST_Request $request ) : bool {
+		return $this->current_user_can_access_rest( $request->get_param( 'id' ) ?? 0 );
 	}
 
 	/**
@@ -176,6 +190,33 @@ class Routes {
 			'namespace' => $namespace,
 			'route'     => "/{$route}",
 		];
+	}
+
+	/**
+	 * Determine if current user has permissions to access REST API.
+	 *
+	 * @author R A Van Epps <rave@ravanepps.com>
+	 * @since  NEXT
+	 *
+	 * @param  int $post_id Post ID.
+	 * @return bool         Whether current user can access REST API.
+	 */
+	private function current_user_can_access_rest( int $post_id = 0 ) {
+		if ( ! is_user_logged_in() ) {
+			return false;
+		}
+
+		$post = get_post( $post_id );
+
+		if ( null === $post ) {
+			return false;
+		}
+
+		if ( current_user_can( 'edit_published_posts' ) ) {
+			return true;
+		}
+
+		return get_current_user_id() === $post->post_author;
 	}
 }
 
