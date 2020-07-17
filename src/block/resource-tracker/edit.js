@@ -16,9 +16,9 @@ const {
 	editor: {
 		InspectorControls,
 	},
-    element: {
-        useEffect,
-    },
+	element: {
+		useEffect,
+	},
 } = wp;
 
 /**
