@@ -12,9 +12,11 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Resource Tracker block to for use in TTRPGs.
 
 == Description ==
+
 This plugin provides the Resource Tracker block, which can be used to track usage of limited resources (e.g., abilities, spells) in Table-Top Role-Playing Games.
 
 == Installation ==
+
 1. Upload the `resource-tracker` folder to the `/wp-content/plugins` directory.
 2. Activate the Resource Tracker plugin through the 'Plugins' menu in WordPress.
 3. Add the 'Resource Tracker' block in a post or page.
@@ -24,6 +26,7 @@ This plugin provides the Resource Tracker block, which can be used to track usag
 7. Use the Reset button to reset usage back to 0.
 
 == Frequently Asked Questions ==
+
 = How should I use this block? =
 Use this block to track fixed-usage resources, such as spells or special abilities. Click a checkbox to mark one use, until all uses are gone! Then, you can click Reset to regain full usage of the resource, e.g., after a rest.
 
@@ -31,9 +34,15 @@ Use this block to track fixed-usage resources, such as spells or special abiliti
 Feel free to create an issue or PR in the [Github repo here](https://github.com/ravewebdev/resource-tracker).
 
 == Screenshots ==
+
 1. Admin Demo.
 2. Frontend Demo.
 
 == Changelog ==
+
+= NEXT =
+* Updated: Cleaned up code to be more in line with similar blocks (e.g., Initiative Tracker).
+* Fixed: Changed block ID to update only at creation to avoid false-positive post "changes."
+
 = 1.0.0 =
-Added: Create Resource Tracker block.
+* Added: Created Resource Tracker block.
