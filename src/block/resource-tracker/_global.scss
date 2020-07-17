@@ -17,7 +17,7 @@ $color-grey: #6c7781;
 }
 
 @mixin checkmark {
-	color: $color-black;
+	color: inherit;
 	content: '\2717';
 	font-family: initial;
 	font-size: 4.25rem;
