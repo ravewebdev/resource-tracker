@@ -16,6 +16,9 @@ const {
 	editor: {
 		InspectorControls,
 	},
+    element: {
+        useEffect,
+    },
 } = wp;
 
 /**
@@ -40,6 +43,14 @@ const Edit = ( props ) => {
 		setAttributes,
 	} = props;
 
+	useEffect( () => {
+
+		// If id is not set (initial block creation), set id to clientId value.
+		if ( 0 === id.length ) {
+			onUpdateResource( 'id', clientId );
+		}
+	}, [] );
+
 	/**
 	 * Handle updating resource attributes.
 	 *
@@ -54,11 +65,6 @@ const Edit = ( props ) => {
 			[ attribute ]: value,
 		} );
 	};
-
-	// Update id attr when clientId changes.
-	if ( clientId !== id ) {
-		onUpdateResource( 'id', clientId );
-	}
 
 	return (
 		<>
