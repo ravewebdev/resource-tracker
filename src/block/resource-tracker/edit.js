@@ -83,14 +83,15 @@ const Edit = ( props ) => {
 					</PanelRow>
 				</PanelBody>
 			</InspectorControls>
-			<Resource
-				className={ className }
-				name={ name }
-				total={ total }
-				used={ used }
-				onUpdateResource={ onUpdateResource }
-				isEditing={ true }
-			/>
+			<div className={ className }>
+				<Resource
+					name={ name }
+					total={ total }
+					used={ used }
+					onUpdateResource={ onUpdateResource }
+					isEditing={ true }
+				/>
+			</div>
 		</>
 	);
 };

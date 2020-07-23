@@ -28,7 +28,7 @@ function render_block( array $attributes ) : string {
 	?>
 
 	<div
-		class="resource wp-block-rave-resource-tracker"
+		class="wp-block-rave-resource-tracker"
 		data-id="<?php echo esc_attr( $id ); ?>"
 		data-name="<?php echo esc_attr( $name ); ?>"
 		data-total="<?php echo esc_attr( $total ); ?>"

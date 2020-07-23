@@ -32,7 +32,6 @@ const {
 const FrontendResource = ( props ) => {
 	const {
 		dataAttributes,
-		className,
 	} = props;
 
 	const [ isLoading, setLoading ] = useState( false );
@@ -92,7 +91,6 @@ const FrontendResource = ( props ) => {
 	return (
 		<>
 			<Resource
-				className={ className }
 				name={ name }
 				total={ total }
 				used={ used }

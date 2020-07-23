@@ -21,7 +21,6 @@ const {
  */
 const Resource = ( props ) => {
 	const {
-		className,
 		name,
 		total,
 		used,
@@ -58,7 +57,7 @@ const Resource = ( props ) => {
 	}
 
 	return (
-		<div className={ `${ className } resource ${ used === total ? 'empty' : '' }` }>
+		<div className={ `resource ${ used === total ? 'empty' : '' }` }>
 			<h3 className="resource-name">
 				{ displayName }
 			</h3>

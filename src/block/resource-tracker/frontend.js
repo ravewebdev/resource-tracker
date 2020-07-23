@@ -10,8 +10,8 @@ const {
 	},
 } = wp;
 
-const resourceClass = 'wp-block-rave-resource-tracker';
-const resources = document.querySelectorAll( `.${ resourceClass }` );
+const resourceClass = '.wp-block-rave-resource-tracker',
+	resources = document.querySelectorAll( resourceClass );
 
 /**
  * Retrieve and re-render resource tracker blocks.
@@ -31,10 +31,7 @@ resources.forEach( ( resource ) => {
 	};
 
 	render(
-		<FrontendResource
-			dataAttributes={ attributes }
-			className={ resourceClass }
-		/>,
+		<FrontendResource dataAttributes={ attributes } />,
 		resource
 	);
 } );
