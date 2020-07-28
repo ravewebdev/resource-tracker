@@ -5,6 +5,8 @@
 import Resource from './components/Resource';
 import ResourceSettings from './components/ResourceSettings';
 
+import './editor.scss';
+
 const {
 	i18n: {
 		__,
