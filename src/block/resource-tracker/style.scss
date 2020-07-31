@@ -38,18 +38,18 @@
 			margin-bottom: 0;
 		}
 
-		.components-base-control__help {
+		.components-base-control__help { // sass-lint:disable-line class-name-format
 			font-size: 1.5rem;
 			font-style: italic;
 			line-height: 1;
 			text-align: center;
 		}
 
-		.components-checkbox-control__input {
+		.components-checkbox-control__input { // sass-lint:disable-line class-name-format
 			margin: 0;
 		}
 
-		.components-checkbox-control__checked {
+		.components-checkbox-control__checked { // sass-lint:disable-line class-name-format
 			display: none;
 		}
 	}
